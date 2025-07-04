@@ -204,7 +204,7 @@ def generate_launch_description():
 
     # Load controllers
     load_controllers = []
-    for controller in ['fr3_arm_controller', 'joint_state_broadcaster']:
+    for controller in ['fr3_arm_controller',]:# 'joint_state_broadcaster']:
         load_controllers += [
             ExecuteProcess(
                 cmd=['ros2 run controller_manager spawner {}'.format(
@@ -255,12 +255,12 @@ def generate_launch_description():
          fake_sensor_commands_arg,
          db_arg,
          rviz_node,
-         robot_state_publisher,
+        #  robot_state_publisher,
          run_move_group_node,
-         ros2_control_node,
-         joint_state_publisher,
-         franka_robot_state_broadcaster,
-         gripper_launch_file
+        #  ros2_control_node,
+        #  joint_state_publisher,
+        #  franka_robot_state_broadcaster,
+        #  gripper_launch_file
          ]
         + load_controllers
     )
