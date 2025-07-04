@@ -260,7 +260,7 @@ def generate_launch_description():
         #  ros2_control_node,
         #  joint_state_publisher,
         #  franka_robot_state_broadcaster,
-        #  gripper_launch_file
+         gripper_launch_file
          ]
         + load_controllers
     )
